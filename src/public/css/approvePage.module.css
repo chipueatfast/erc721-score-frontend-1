@@ -1,0 +1,18 @@
+.approvePageContainer {
+  padding: 0 30px;
+  margin-top: 30px; }
+  .approvePageContainer :global .ant-table-wrapper .ant-table-content table thead.ant-table-thead tr th.ant-table-cell:last-child {
+    text-align: right; }
+  .approvePageContainer :global .ant-table-wrapper .ant-table-content table tbody.ant-table-tbody tr td.ant-table-cell:last-child {
+    text-align: right; }
+
+.modalApproveCandidate :global .identify-image-wrapper {
+  text-align: center; }
+  .modalApproveCandidate :global .identify-image-wrapper img {
+    object-fit: cover;
+    max-width: 100%; }
+
+@media screen and (max-width: 768px) {
+  .approvePageContainer {
+    padding: 0 8px;
+    margin-top: 12px; } }

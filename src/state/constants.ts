@@ -1,0 +1,1 @@
+export const SET_USER_ADDRESS = 'SET_USER_ADDRESS';

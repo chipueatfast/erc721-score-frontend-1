@@ -1,0 +1,152 @@
+.ant-table-wrapper {
+  .ant-table {
+    .ant-table-content {
+      table {
+        border: solid 1px #EEEEEE;
+        border-radius: 5px;
+
+        .ant-table-thead {
+          font-weight: 500;
+
+          tr th.ant-table-cell {
+            padding: 12px 8px;
+
+            &:first-child {
+              padding-left: 16px;
+              border-top-left-radius: 5px;
+            }
+
+            &:last-child {
+              padding-right: 16px;
+              border-top-right-radius: 5px;
+            }
+
+            &::before {
+              content: unset;
+            }
+          }
+        }
+
+        .ant-table-tbody {
+          tr td.ant-table-cell {
+            padding: 12px 8px;
+            word-break: break-word;
+
+            &:first-child {
+              padding-left: 16px;
+            }
+
+            &:last-child {
+              padding-right: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.modal-custom {
+  .ant-modal-content {
+    border-radius: 5px;
+
+    .ant-modal-header {
+      border-bottom: none;
+      padding: 12px 24px;
+      border-radius: 5px;
+
+      .ant-modal-title {
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: bold;
+        text-align: center;
+      }
+    }
+
+    .ant-modal-body {
+      padding: 12px 24px;
+    }
+
+    .ant-modal-footer {
+      border-top: none;
+      padding: 12px 24px 24px;
+
+      button {
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .ant-table-wrapper {
+    .ant-table {
+      .ant-table-content {
+        table {
+          font-size: 12px;
+          line-height: 16px;
+
+          .ant-table-thead {
+            tr th.ant-table-cell {
+              padding: 12px 6px;
+
+              &:first-child {
+                padding-left: 8px;
+              }
+
+              &:last-child {
+                padding-right: 8px;
+              }
+            }
+          }
+
+          .ant-table-tbody {
+            tr td.ant-table-cell {
+              padding: 8px 6px;
+
+              &:first-child {
+                padding-left: 8px;
+              }
+
+              &:last-child {
+                padding-right: 8px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .modal-custom {
+    .ant-modal-content {
+      border-radius: 5px;
+  
+      .ant-modal-header {
+        border-bottom: none;
+        padding: 8px 16px;
+        border-radius: 5px;
+  
+        .ant-modal-title {
+          font-size: 16px;
+          line-height: 26px;
+          font-weight: bold;
+          text-align: center;
+        }
+      }
+  
+      .ant-modal-body {
+        padding: 8px 16px;
+      }
+  
+      .ant-modal-footer {
+        border-top: none;
+        padding: 8px 16px 16px;
+  
+        button {
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}

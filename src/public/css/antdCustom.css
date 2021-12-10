@@ -1,0 +1,76 @@
+.ant-table-wrapper .ant-table .ant-table-content table {
+  border: solid 1px #EEEEEE;
+  border-radius: 5px; }
+  .ant-table-wrapper .ant-table .ant-table-content table .ant-table-thead {
+    font-weight: 500; }
+    .ant-table-wrapper .ant-table .ant-table-content table .ant-table-thead tr th.ant-table-cell {
+      padding: 12px 8px; }
+      .ant-table-wrapper .ant-table .ant-table-content table .ant-table-thead tr th.ant-table-cell:first-child {
+        padding-left: 16px;
+        border-top-left-radius: 5px; }
+      .ant-table-wrapper .ant-table .ant-table-content table .ant-table-thead tr th.ant-table-cell:last-child {
+        padding-right: 16px;
+        border-top-right-radius: 5px; }
+      .ant-table-wrapper .ant-table .ant-table-content table .ant-table-thead tr th.ant-table-cell::before {
+        content: unset; }
+  .ant-table-wrapper .ant-table .ant-table-content table .ant-table-tbody tr td.ant-table-cell {
+    padding: 12px 8px;
+    word-break: break-word; }
+    .ant-table-wrapper .ant-table .ant-table-content table .ant-table-tbody tr td.ant-table-cell:first-child {
+      padding-left: 16px; }
+    .ant-table-wrapper .ant-table .ant-table-content table .ant-table-tbody tr td.ant-table-cell:last-child {
+      padding-right: 16px; }
+
+.modal-custom .ant-modal-content {
+  border-radius: 5px; }
+  .modal-custom .ant-modal-content .ant-modal-header {
+    border-bottom: none;
+    padding: 12px 24px;
+    border-radius: 5px; }
+    .modal-custom .ant-modal-content .ant-modal-header .ant-modal-title {
+      font-size: 18px;
+      line-height: 28px;
+      font-weight: bold;
+      text-align: center; }
+  .modal-custom .ant-modal-content .ant-modal-body {
+    padding: 12px 24px; }
+  .modal-custom .ant-modal-content .ant-modal-footer {
+    border-top: none;
+    padding: 12px 24px 24px; }
+    .modal-custom .ant-modal-content .ant-modal-footer button {
+      font-weight: 500; }
+
+@media screen and (max-width: 768px) {
+  .ant-table-wrapper .ant-table .ant-table-content table {
+    font-size: 12px;
+    line-height: 16px; }
+    .ant-table-wrapper .ant-table .ant-table-content table .ant-table-thead tr th.ant-table-cell {
+      padding: 12px 6px; }
+      .ant-table-wrapper .ant-table .ant-table-content table .ant-table-thead tr th.ant-table-cell:first-child {
+        padding-left: 8px; }
+      .ant-table-wrapper .ant-table .ant-table-content table .ant-table-thead tr th.ant-table-cell:last-child {
+        padding-right: 8px; }
+    .ant-table-wrapper .ant-table .ant-table-content table .ant-table-tbody tr td.ant-table-cell {
+      padding: 8px 6px; }
+      .ant-table-wrapper .ant-table .ant-table-content table .ant-table-tbody tr td.ant-table-cell:first-child {
+        padding-left: 8px; }
+      .ant-table-wrapper .ant-table .ant-table-content table .ant-table-tbody tr td.ant-table-cell:last-child {
+        padding-right: 8px; }
+  .modal-custom .ant-modal-content {
+    border-radius: 5px; }
+    .modal-custom .ant-modal-content .ant-modal-header {
+      border-bottom: none;
+      padding: 8px 16px;
+      border-radius: 5px; }
+      .modal-custom .ant-modal-content .ant-modal-header .ant-modal-title {
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: bold;
+        text-align: center; }
+    .modal-custom .ant-modal-content .ant-modal-body {
+      padding: 8px 16px; }
+    .modal-custom .ant-modal-content .ant-modal-footer {
+      border-top: none;
+      padding: 8px 16px 16px; }
+      .modal-custom .ant-modal-content .ant-modal-footer button {
+        font-weight: 500; } }

@@ -1,0 +1,1 @@
+export const scoreSheetPath = 'score_sheets';

@@ -1,0 +1,1 @@
+export const auditorPath = `auditor/`;

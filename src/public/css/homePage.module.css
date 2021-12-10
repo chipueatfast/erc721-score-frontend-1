@@ -1,0 +1,23 @@
+.homePageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 64px; }
+  .homePageContainer :global .welcome-text {
+    margin-bottom: 8px; }
+  .homePageContainer :global .heading {
+    text-align: center;
+    font-size: 48px;
+    line-height: 1.5;
+    font-weight: bold;
+    margin-bottom: 8px; }
+  .homePageContainer :global .author-wrapper {
+    margin-top: 24px; }
+    .homePageContainer :global .author-wrapper .text {
+      text-align: center; }
+
+@media screen and (max-width: 768px) {
+  .homePageContainer :global .heading {
+    font-size: 24px; }
+  .homePageContainer :global .logo {
+    width: 200px; } }

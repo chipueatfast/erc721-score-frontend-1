@@ -1,0 +1,31 @@
+.staffPageContainer {
+  padding: 30px; }
+  .staffPageContainer :global .tab-list {
+    margin-bottom: 16px; }
+  .staffPageContainer :global .heading-2 {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 16px; }
+  .staffPageContainer :global .card-adding-role-wrapper {
+    max-width: 512px;
+    width: 100%;
+    padding: 24px;
+    box-shadow: 0px 4px 10px 0 #EEEEEE; }
+    .staffPageContainer :global .card-adding-role-wrapper .input-wrapper {
+      margin-bottom: 20px; }
+    .staffPageContainer :global .card-adding-role-wrapper .actions-wrapper {
+      display: flex;
+      justify-content: flex-end; }
+  .staffPageContainer :global .auditor-table-wrapper {
+    margin-top: 30px; }
+
+@media screen and (max-width: 768px) {
+  .staffPageContainer {
+    padding: 16px 8px; }
+    .staffPageContainer :global .heading-2 {
+      font-size: 20px;
+      line-height: 30px; }
+    .staffPageContainer :global .card-adding-role-wrapper {
+      padding: 8px; }
+    .staffPageContainer :global .auditor-table-wrapper {
+      margin-top: 24px; } }
