@@ -1,0 +1,39 @@
+@import './_variables.scss';
+
+.createExamRoomFormContainer {
+  padding: 0;
+
+  :global {
+    .card-creating-exam-room-wrapper {
+      max-width: 512px;
+      width: 100%;
+      padding: 24px;
+      box-shadow: 0px 4px 10px 0 $primary-tint1;
+    }
+
+    .select-subject {
+      margin-bottom: 20px;
+    }
+
+    .input-wrapper {
+      margin-bottom: 20px;
+    }
+
+    .actions-wrapper {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .createExamRoomFormContainer {
+    padding: 0;
+
+    :global {
+      .card-creating-exam-room-wrapper {
+        padding: 16px 8px;
+      }
+    }
+  }
+}

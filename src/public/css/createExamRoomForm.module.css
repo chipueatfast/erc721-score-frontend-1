@@ -1,0 +1,20 @@
+.createExamRoomFormContainer {
+  padding: 0; }
+  .createExamRoomFormContainer :global .card-creating-exam-room-wrapper {
+    max-width: 512px;
+    width: 100%;
+    padding: 24px;
+    box-shadow: 0px 4px 10px 0 #EEEEEE; }
+  .createExamRoomFormContainer :global .select-subject {
+    margin-bottom: 20px; }
+  .createExamRoomFormContainer :global .input-wrapper {
+    margin-bottom: 20px; }
+  .createExamRoomFormContainer :global .actions-wrapper {
+    display: flex;
+    justify-content: flex-end; }
+
+@media screen and (max-width: 768px) {
+  .createExamRoomFormContainer {
+    padding: 0; }
+    .createExamRoomFormContainer :global .card-creating-exam-room-wrapper {
+      padding: 16px 8px; } }

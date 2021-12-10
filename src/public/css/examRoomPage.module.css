@@ -1,0 +1,25 @@
+.examRoomPageContainer {
+  padding: 0 30px;
+  margin-top: 30px; }
+  .examRoomPageContainer :global .heading-wrapper {
+    margin-bottom: 24px; }
+    .examRoomPageContainer :global .heading-wrapper .heading {
+      font-size: 24px;
+      line-height: 36px;
+      font-weight: bold; }
+    .examRoomPageContainer :global .heading-wrapper .description {
+      font-size: 14px;
+      line-height: 20px; }
+
+@media screen and (max-width: 768px) {
+  .examRoomPageContainer {
+    padding: 0 8px;
+    margin-top: 12px; }
+    .examRoomPageContainer :global .heading-wrapper {
+      margin-bottom: 16px; }
+      .examRoomPageContainer :global .heading-wrapper .heading {
+        font-size: 20px;
+        line-height: 30px; }
+      .examRoomPageContainer :global .heading-wrapper .description {
+        font-size: 14px;
+        line-height: 20px; } }

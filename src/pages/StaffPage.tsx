@@ -76,7 +76,8 @@ function StaffPage() {
               return (
                 <Card
                   className="card-adding-role-wrapper"
-                  elevation={1}>
+                  elevation={1}
+                >
                   <div className='input-wrapper'>
                     <TextInput
                       name='name'

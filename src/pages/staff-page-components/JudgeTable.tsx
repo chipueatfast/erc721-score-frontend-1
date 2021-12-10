@@ -9,7 +9,6 @@ function JudgeTable() {
         ({
           value,
         }) => {
-          console.log(value);
           let tableData = [];
           if (value) {
             tableData = Object.keys(value).map(k => value[k]);

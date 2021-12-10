@@ -1,25 +1,25 @@
 import React from 'react';
-import {Button, Card, Heading, majorScale, Pane, Paragraph, Select, Table, TableHeaderCell, TextInput} from 'evergreen-ui';
 import CreateExamRoomForm from './exam-room-components/CreateExamRoomForm';
 import { UserAddressContext } from 'context/userAddressContext';
 import { ExamRoomTable } from './exam-room-components/ExamRoomTable';
 
+import styles from '../public/css/examRoomPage.module.css';
+
 function ExamRoomPage() {
     const userAddress = React.useContext(UserAddressContext);
     return (
-        <Pane marginX={majorScale(8)}>
-            <Pane marginBottom={majorScale(2)}>
-                <Heading>
+        <div className={styles.examRoomPageContainer}>
+            <div className='heading-wrapper'>
+                <div className='heading'>
                     Host an exam and submit score result of candidates
-                </Heading>
-                <Paragraph>
+                </div>
+                <div className='description' >
                     Create folders to store all exam record in one place.
-                </Paragraph>
-            </Pane>
+                </div>
+            </div>
             <CreateExamRoomForm userAddress={userAddress} />
             <ExamRoomTable userAddress={userAddress} />
-
-        </Pane>
+        </div>
     );
 }
 
