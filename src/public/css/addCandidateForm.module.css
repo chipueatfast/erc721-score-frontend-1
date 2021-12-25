@@ -1,0 +1,41 @@
+.addCandidateFormContainer {
+  width: 55%; }
+  .addCandidateFormContainer :global .card-add-candidate-wrapper {
+    width: 100%;
+    padding: 24px;
+    box-shadow: 0px 4px 10px 0 #EEEEEE; }
+    .addCandidateFormContainer :global .card-add-candidate-wrapper input {
+      width: 100%;
+      font-size: 14px;
+      line-height: 20px;
+      padding: 8px 16px;
+      height: 36px; }
+    .addCandidateFormContainer :global .card-add-candidate-wrapper .autocomplete-wrapper {
+      margin-bottom: 20px; }
+    .addCandidateFormContainer :global .card-add-candidate-wrapper .input-wrapper {
+      margin-bottom: 20px; }
+      .addCandidateFormContainer :global .card-add-candidate-wrapper .input-wrapper:last-child {
+        margin-bottom: 0; }
+    .addCandidateFormContainer :global .card-add-candidate-wrapper .actions-wrapper {
+      display: flex;
+      justify-content: flex-end; }
+    .addCandidateFormContainer :global .card-add-candidate-wrapper .error-message-wrapper .error-message {
+      color: red;
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: flex-end; }
+  .addCandidateFormContainer :global .success-message-wrapper {
+    position: fixed;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%); }
+
+@media screen and (max-width: 768px) {
+  .addCandidateFormContainer {
+    width: 100%;
+    margin-top: 24px; }
+    .addCandidateFormContainer :global .card-add-candidate-wrapper {
+      padding: 16px 8px; }
+      .addCandidateFormContainer :global .card-add-candidate-wrapper input {
+        padding: 4px 8px;
+        height: 30px; } }

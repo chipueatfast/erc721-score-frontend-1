@@ -18,6 +18,7 @@ import AuditorTable from './staff-page-components/AuditorTable';
 import JudgeTable from './staff-page-components/JudgeTable';
 import { grantJudgeRole } from 'services/grantJudgeRole';
 import { addJudge } from 'firebase-service/addJudge';
+
 import styles from '../public/css/staffPage.module.css';
 
 function StaffPage() {

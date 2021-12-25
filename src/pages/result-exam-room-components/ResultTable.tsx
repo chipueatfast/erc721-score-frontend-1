@@ -52,7 +52,6 @@ function ResultTable(props: {
                                 return (<ResultRow position={index} key={scoreSheet.id} subject={props.subject} {...scoreSheet} roomId={props.roomId} />)
                             })
                         }
-
                     </Pane>)
                 }
             }

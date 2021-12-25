@@ -19,7 +19,7 @@ export async function getAllScoreToken(): Promise<{
                 Object.keys(value[roomKey]).forEach(resultKey => {
                     tokenList.push({
                         roomId: roomKey,
-                        ...value[roomKey][resultKey]
+                        ...value[roomKey][resultKey],
                     });
                 })
             });

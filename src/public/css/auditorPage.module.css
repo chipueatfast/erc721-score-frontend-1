@@ -1,0 +1,61 @@
+.auditorPageContainer {
+  padding: 0 30px;
+  margin-top: 30px; }
+  .auditorPageContainer :global .heading {
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: bold; }
+  .auditorPageContainer :global .description {
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 16px; }
+  .auditorPageContainer :global .btn-scan {
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 16px; }
+  .auditorPageContainer :global .spinner-wrapper {
+    margin-top: 16px; }
+  .auditorPageContainer :global p {
+    margin-bottom: 0; }
+  .auditorPageContainer :global .content-wrapper {
+    margin-top: 16px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600; }
+    .auditorPageContainer :global .content-wrapper .row-wrapper {
+      display: flex; }
+  .auditorPageContainer :global .no-error-wrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 24px; }
+    .auditorPageContainer :global .no-error-wrapper .informational-text {
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 600;
+      margin-left: 16px; }
+  .auditorPageContainer :global .Custom-table-antd {
+    margin-top: 24px; }
+
+@media screen and (max-width: 768px) {
+  .auditorPageContainer {
+    padding: 0 16px;
+    margin-top: 16px; }
+    .auditorPageContainer :global .heading {
+      font-size: 20px;
+      line-height: 30px;
+      margin-top: 8px; }
+    .auditorPageContainer :global .description {
+      font-size: 14px;
+      line-height: 20px; }
+    .auditorPageContainer :global .spinner-wrapper {
+      margin-top: 8px;
+      display: flex;
+      justify-content: center; }
+    .auditorPageContainer :global .content-wrapper {
+      margin-top: 8px;
+      font-size: 14px;
+      line-height: 20px; }
+    .auditorPageContainer :global .no-error-wrapper .informational-text {
+      margin-left: 8px; }
+    .auditorPageContainer :global .Custom-table-antd {
+      margin-top: 16px; } }

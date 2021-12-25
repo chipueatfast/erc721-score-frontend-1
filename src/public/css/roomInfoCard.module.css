@@ -1,0 +1,26 @@
+.roomInfoCardContainer {
+  width: 40%; }
+  .roomInfoCardContainer :global .card-wrapper {
+    width: 100%;
+    background-color: #EEEEEE;
+    padding: 30px;
+    height: 100%;
+    box-shadow: none;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .roomInfoCardContainer :global .card-wrapper .text-wrapper {
+      margin-bottom: 20px; }
+      .roomInfoCardContainer :global .card-wrapper .text-wrapper:last-child {
+        margin-bottom: 0; }
+
+@media screen and (max-width: 768px) {
+  .roomInfoCardContainer {
+    width: 100%; }
+    .roomInfoCardContainer :global .card-wrapper {
+      padding: 16px 8px;
+      height: unset;
+      font-size: 14px;
+      line-height: 20px; } }

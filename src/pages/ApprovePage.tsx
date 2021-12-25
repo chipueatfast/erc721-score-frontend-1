@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react';
-import { majorScale, Text, Pane, Tooltip, IconButton, ManuallyEnteredDataIcon, Dialog, toaster, Paragraph, Strong } from 'evergreen-ui';
+import { Text, Pane, Tooltip, IconButton, ManuallyEnteredDataIcon, Dialog, toaster, Paragraph, Strong } from 'evergreen-ui';
 import { Table, Modal } from 'antd';
 import { EnumCandidateVerifyStatus } from 'models/EnumCandidateVerifyStatus.model';
 import { grantCandidateRole } from 'services/grantCandidateRole';

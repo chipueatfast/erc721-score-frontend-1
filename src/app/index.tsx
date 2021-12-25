@@ -18,7 +18,7 @@ import { UserAddressContext } from '../context/userAddressContext';
 import ResultExamRoomPage from 'pages/ResultExamRoomPage';
 import CandidateRegisterPage from 'pages/CandidateRegisterPage';
 import CandidateProfilePage from 'pages/CandidateProfilePage';
-import { Pane, majorScale } from 'evergreen-ui';
+import { Pane } from 'evergreen-ui';
 import AuditorPage from 'pages/AuditorPage';
 import ApprovePage from 'pages/ApprovePage';
 import StaffPage from 'pages/StaffPage';
