@@ -27,7 +27,7 @@ function HomePage(props: {
                     !!displayName ? <Heading>
                         Welcome {displayName} to
                     </Heading> :
-                        <>
+                        <div className='registration-introduction'>
                             <Text>
                                 If you are a candidate, please register your Ethereum address by clicking&nbsp;
                             </Text>
@@ -35,10 +35,11 @@ function HomePage(props: {
                                 onClick={() => {
                                     history.push('/candidate/register');
                                 }}
+                                className='btn-registration'
                             >
                                 Register as a candidate
                             </Button>
-                        </>
+                        </div>
                 }
             </div>
             <div className='heading'>

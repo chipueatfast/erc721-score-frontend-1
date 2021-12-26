@@ -1,0 +1,49 @@
+.searchContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 30px;
+  margin-top: 30px; }
+  .searchContainer :global .formik-wrapper {
+    width: 600px;
+    margin: auto; }
+    .searchContainer :global .formik-wrapper .heading {
+      font-size: 24px;
+      line-height: 36px;
+      font-weight: bold; }
+    .searchContainer :global .formik-wrapper .description {
+      font-size: 16px;
+      line-height: 24px; }
+    .searchContainer :global .formik-wrapper .search-wrapper {
+      width: 100%;
+      display: flex;
+      margin-top: 24px; }
+      .searchContainer :global .formik-wrapper .search-wrapper > div {
+        width: 100%; }
+      .searchContainer :global .formik-wrapper .search-wrapper .search-input-wrapper {
+        width: 100%; }
+        .searchContainer :global .formik-wrapper .search-wrapper .search-input-wrapper input {
+          width: 100%; }
+      .searchContainer :global .formik-wrapper .search-wrapper .btn-submit {
+        margin-left: 16px;
+        width: 130px; }
+
+@media screen and (max-width: 768px) {
+  .searchContainer {
+    padding: 0 16px;
+    margin-top: 16px; }
+    .searchContainer :global .formik-wrapper {
+      width: 100%; }
+      .searchContainer :global .formik-wrapper .heading {
+        font-size: 20px;
+        line-height: 30px; }
+      .searchContainer :global .formik-wrapper .description {
+        font-size: 14px;
+        line-height: 20px; }
+      .searchContainer :global .formik-wrapper .search-wrapper {
+        margin-top: 16px; }
+        .searchContainer :global .formik-wrapper .search-wrapper .btn-submit {
+          margin-left: 8px; }
+    .searchContainer :global .candidate-result-table {
+      margin-top: 16px; } }

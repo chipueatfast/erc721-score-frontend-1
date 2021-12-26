@@ -2,9 +2,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 64px; }
+  margin-top: 64px;
+  padding: 0 30px; }
   .homePageContainer :global .welcome-text {
     margin-bottom: 8px; }
+    .homePageContainer :global .welcome-text .registration-introduction {
+      display: flex;
+      flex-direction: row;
+      align-items: center; }
   .homePageContainer :global .heading {
     text-align: center;
     font-size: 48px;
@@ -17,7 +22,18 @@
       text-align: center; }
 
 @media screen and (max-width: 768px) {
-  .homePageContainer :global .heading {
-    font-size: 24px; }
-  .homePageContainer :global .logo {
-    width: 200px; } }
+  .homePageContainer {
+    padding: 0 16px; }
+    .homePageContainer :global .welcome-text {
+      margin-bottom: 8px; }
+      .homePageContainer :global .welcome-text .registration-introduction {
+        display: flex;
+        flex-direction: column;
+        text-align: center; }
+        .homePageContainer :global .welcome-text .registration-introduction .btn-registration {
+          margin-top: 8px; }
+    .homePageContainer :global .heading {
+      font-size: 24px;
+      margin-top: 16px; }
+    .homePageContainer :global .logo {
+      width: 200px; } }

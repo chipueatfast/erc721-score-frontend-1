@@ -1,0 +1,86 @@
+@import './_variables';
+
+.searchContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 30px;
+  margin-top: 30px;
+
+  :global {
+    .formik-wrapper {
+      width: 600px;
+      margin: auto;
+
+      .heading {
+        font-size: $font-size-heading2;
+        line-height: $line-height-heading2;
+        font-weight: bold;
+      }
+
+      .description {
+        font-size: $font-size-md;
+        line-height: $line-height-md;
+      }
+
+      .search-wrapper {
+        width: 100%;
+        display: flex;
+        margin-top: 24px;
+
+        &>div {
+          width: 100%;
+        }
+
+        .search-input-wrapper {
+          width: 100%;
+
+          input {
+            width: 100%;
+          }
+        }
+
+        .btn-submit {
+          margin-left: 16px;
+          width: 130px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .searchContainer {
+    padding: 0 16px;
+    margin-top: 16px;
+
+    :global {
+      .formik-wrapper {
+        width: 100%;
+
+        .heading {
+          font-size: $font-size-heading3;
+          line-height: $line-height-heading3;
+        }
+
+        .description {
+          font-size: $font-size-sm;
+          line-height: $line-height-sm;
+        }
+
+        .search-wrapper {
+          margin-top: 16px;
+          
+          .btn-submit {
+            margin-left: 8px;
+          }
+        }
+      }
+
+      .candidate-result-table {
+        margin-top: 16px;
+      }
+    }
+  }
+}
