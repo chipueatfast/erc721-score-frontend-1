@@ -1,0 +1,50 @@
+@import './_variables.scss';
+
+.candidateProfileContainer {
+  padding: 0 30px;
+  margin-top: 30px;
+
+  :global {
+    .heading-wrapper {
+      .heading {
+        font-size: $font-size-heading2;
+        line-height: $line-height-heading2;
+        font-weight: bold;
+      }
+
+      .description {
+        font-size: $font-size-sm;
+        line-height: $line-height-sm;
+      }
+    }
+
+    .candidate-result-table {
+      margin-top: 24px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .candidateProfileContainer {
+    padding: 0 16px;
+    margin-top: 12px;
+
+    :global {
+      .heading-wrapper {
+        .heading {
+          font-size: $font-size-heading3;
+          line-height: $line-height-heading3;
+        }
+
+        .description {
+          font-size: $font-size-sm;
+          line-height: $line-height-sm;
+        }
+      }
+
+      .candidate-result-table {
+        margin-top: 16px;
+      }
+    }
+  }
+}

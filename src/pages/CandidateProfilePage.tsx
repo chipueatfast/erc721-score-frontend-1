@@ -1,79 +1,141 @@
-import {UserAddressContext} from 'context/userAddressContext';
-import {BanCircleIcon, Heading, majorScale, minorScale, Pane, Paragraph, Table, Text, TickCircleIcon} from 'evergreen-ui';
-import {getScoreResultOfAnAddress} from 'firebase-service/getScoreResultOfAnAddress';
-import React from 'react';
-import {useHistory} from 'react-router-dom';
-import CandidateResultRow from './candidate-profile-components/CandidateResultRow';
+import React, { useContext, useEffect, useState } from 'react';
+import { UserAddressContext } from 'context/userAddressContext';
+import { TickCircleIcon, BanCircleIcon } from 'evergreen-ui';
+import { getScoreResultOfAnAddress } from 'firebase-service/getScoreResultOfAnAddress';
+import moment from 'moment';
+import { convertScoreFormToScoreHash } from 'services/convertScoreFormToScoreHash';
+import { getScoreHash } from 'services/getScoreHash';
+import { getExamRoomNameByRoomId } from 'firebase-service/getExamRoomNameByRoomId';
+import CandidateResultTable from './candidate-profile-components/CandidateResultTable';
 
-interface IProps {}
+import styles from '../public/css/candidateProfilePage.module.css';
 
-function CandidateProfilePage(props : IProps) {
-    const userAddress = React.useContext(UserAddressContext);
-    const history = useHistory();
-    const [candidateResult,
-        setCandidateResult] = React.useState < {
-        createdDate: string;
-        id: string;
-        name: string;
-        score: string;
-        tokenId: string;
-        roomId: string;
-        subject: string;
-    }[] > ([]);
-    React.useEffect(() => {
-        if (userAddress) {
-            getScoreResultOfAnAddress({userAddress}).then(rs => {
-                setCandidateResult(rs);
-            })
-        }
-    }, [userAddress])
-    return (
-        <Pane marginX={majorScale(16)}>
-            <Pane marginBottom={majorScale(2)}>
-                <Heading>
-                    See your result in participated exams
-                </Heading>
-                <Paragraph>
-                    Your result has been recorded and secured reliability. 
-                    <br />
-                    Result that does not have green tick in 'Verifed on blockchain' will not be accepted as valid result.
-                </Paragraph>
-            </Pane>
+type CandidateResultProps = {
+  createdDate: string;
+  id: string;
+  name: string;
+  score: string;
+  tokenId: string;
+  roomId: string;
+  subject: string;
+};
 
-            <Table>
-                <Table.Head>
-                    <Table.HeaderCell>
-                        Score
-                    </Table.HeaderCell>
-                    <Table.HeaderCell>
-                        Subject
-                    </Table.HeaderCell>
-                    <Table.HeaderCell>
-                        Exam name
-                    </Table.HeaderCell>
-                    <Table.HeaderCell>
-                        Created at
-                    </Table.HeaderCell>
-                    <Table.HeaderCell>
-                        Verified on blockchain
-                    </Table.HeaderCell>
+function CandidateProfilePage() {
+  const userAddress = useContext(UserAddressContext);
+  const [candidateResult,
+    setCandidateResult] = useState<CandidateResultProps[]>([]);
 
-                </Table.Head>
-                <Table.Body>
-                    {candidateResult.length === 0 && (<Table.Row>
-                                        <Pane display='flex' alignItems='center' marginX={minorScale(3)}>
-                                            <Text>
-                                                No data yet
-                                            </Text>
-                                        </Pane>
-                                    </Table.Row>)}
-                    {candidateResult.map((r, index) => {
-                        return (<CandidateResultRow r={r} index={index}/>)})
-                    }
-                </Table.Body>
-            </Table>
-        </Pane>
-    );
+  const [formatCandidateResult,
+    setFormatCandidateResult] = useState<any[]>([]);
+
+  useEffect(() => {
+    if (userAddress) {
+      getScoreResultOfAnAddress({ userAddress }).then(rs => {
+        setCandidateResult(rs);
+      })
+    }
+  }, [userAddress]);
+
+  const compareScoreHash = async (record: any) => {
+    let scoreHash = null;
+    await getScoreHash({
+      tokenId: Number(record.tokenId)
+    }).then((result) => scoreHash = result);
+
+    const calculatedScoreHash = convertScoreFormToScoreHash({
+      subject: record.subject,
+      candidateAddress: record.id,
+      score: record
+        .score
+        .toString()
+    });
+
+    return scoreHash === calculatedScoreHash;
+  }
+
+  useEffect(() => {
+    const formatData = candidateResult.map(async (record) => {
+      let examName = '';
+      await getExamRoomNameByRoomId({
+        roomId: record.roomId,
+      }).then((result) => examName = result);
+      const verifiedOnBlockchain = await compareScoreHash(record);
+
+      return {
+        ...record,
+        examName,
+        verifiedOnBlockchain
+      }
+    });
+
+    Promise.all(formatData).then((values: any[]) => {
+      setFormatCandidateResult(values);
+    });
+  }, [candidateResult]);
+
+  const columns = [
+    {
+      title: 'Score',
+      dataIndex: 'score',
+      key: 'score',
+      render: (text: String) => <div>{text}</div>,
+      fixed: true,
+      width: 25,
+    },
+    {
+      title: 'Subject',
+      dataIndex: 'subject',
+      key: 'subject',
+      render: (text: String) => <div>{text}</div>,
+      fixed: true,
+      width: 30,
+    },
+    {
+      title: 'Exam name',
+      dataIndex: 'examName',
+      key: 'examName',
+      render: (text: String) => <div>{text}</div>,
+      fixed: true,
+      width: 100,
+    },
+    {
+      title: 'Verified on Blockchain',
+      dataIndex: 'verifiedOnBlockchain',
+      key: 'verifiedOnBlockchain',
+      render: (flag: Boolean) => <div>{
+        flag
+          ? <TickCircleIcon color="success" />
+          : <BanCircleIcon color="danger" />
+      }</div>,
+      fixed: true,
+      width: 55,
+    },
+    {
+      title: 'Created at',
+      dataIndex: 'createdDate',
+      key: 'createdDate',
+      render: (createdDate: any) => <div>{moment(createdDate).format("MMM Do YYYY")}</div>,
+      fixed: true,
+      width: 55,
+    },
+  ];
+
+  return (
+    <div className={styles.candidateProfileContainer} >
+      <div className="heading-wrapper">
+        <div className="heading">
+          See your result in participated exams
+        </div>
+        <div className="description">
+          Your result has been recorded and secured reliability.
+          <br />
+          Result that does not have green tick in 'Verified on blockchain' will not be accepted as valid result.
+        </div>
+      </div>
+
+      <CandidateResultTable columns={columns} dataSource={formatCandidateResult} className='candidate-result-table' />
+    </div>
+  );
 }
 
 export default CandidateProfilePage;

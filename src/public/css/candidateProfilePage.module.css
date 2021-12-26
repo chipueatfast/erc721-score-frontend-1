@@ -1,0 +1,25 @@
+.candidateProfileContainer {
+  padding: 0 30px;
+  margin-top: 30px; }
+  .candidateProfileContainer :global .heading-wrapper .heading {
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: bold; }
+  .candidateProfileContainer :global .heading-wrapper .description {
+    font-size: 14px;
+    line-height: 20px; }
+  .candidateProfileContainer :global .candidate-result-table {
+    margin-top: 24px; }
+
+@media screen and (max-width: 768px) {
+  .candidateProfileContainer {
+    padding: 0 16px;
+    margin-top: 12px; }
+    .candidateProfileContainer :global .heading-wrapper .heading {
+      font-size: 20px;
+      line-height: 30px; }
+    .candidateProfileContainer :global .heading-wrapper .description {
+      font-size: 14px;
+      line-height: 20px; }
+    .candidateProfileContainer :global .candidate-result-table {
+      margin-top: 16px; } }

@@ -1,3 +1,5 @@
+@import './variables';
+
 .ant-table-wrapper {
   .ant-table {
     .ant-table-content {
@@ -39,6 +41,10 @@
             &:last-child {
               padding-right: 16px;
             }
+          }
+
+          tr.warning td.ant-table-cell {
+            background-color: $warning-color;
           }
         }
       }
@@ -121,12 +127,12 @@
   .modal-custom {
     .ant-modal-content {
       border-radius: 5px;
-  
+
       .ant-modal-header {
         border-bottom: none;
         padding: 8px 16px;
         border-radius: 5px;
-  
+
         .ant-modal-title {
           font-size: 16px;
           line-height: 26px;
@@ -134,15 +140,15 @@
           text-align: center;
         }
       }
-  
+
       .ant-modal-body {
         padding: 8px 16px;
       }
-  
+
       .ant-modal-footer {
         border-top: none;
         padding: 8px 16px 16px;
-  
+
         button {
           font-weight: 500;
         }
