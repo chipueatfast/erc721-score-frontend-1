@@ -14,7 +14,7 @@
 @media screen and (max-width: 768px) {
   .candidateProfileContainer {
     padding: 0 16px;
-    margin-top: 12px; }
+    margin-top: 16px; }
     .candidateProfileContainer :global .heading-wrapper .heading {
       font-size: 20px;
       line-height: 30px; }

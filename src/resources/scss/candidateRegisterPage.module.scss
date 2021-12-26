@@ -1,0 +1,125 @@
+@import './_variables';
+
+.candidateRegisterContainer {
+  padding: 0 30px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+
+  :global {
+    .candidate-register-wrapper {
+      width: 600px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .icon-wrapper {
+      svg {
+        width: 48px;
+        height: 48px;
+      }
+    }
+
+    .heading-wrapper {
+      .heading {
+        font-size: $font-size-heading2;
+        line-height: $line-height-heading2;
+        font-weight: bold;
+      }
+
+      .description {
+        font-size: $font-size-md;
+        line-height: $line-height-md;
+      }
+    }
+
+    .candidate-result-table {
+      margin-top: 16px;
+    }
+
+    .card-wrapper {
+      width: 512px;
+      margin-top: 24px;
+      padding: 24px;
+
+      .input-wrapper {
+        margin-bottom: 32px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .actions-wrapper {
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .candidateRegisterContainer {
+    padding: 0 16px;
+    margin-top: 16px;
+
+    :global {
+      .candidate-register-wrapper {
+        width: 100%;
+        margin: auto;
+        text-align: left;
+      }
+
+      .icon-wrapper {
+        svg {
+          width: 36px;
+          height: 36px;
+        }
+      }
+
+      .heading-wrapper {
+        .heading {
+          font-size: $font-size-heading3;
+          line-height: $line-height-heading3;
+        }
+
+        .description {
+          font-size: $font-size-sm;
+          line-height: $line-height-sm;
+        }
+      }
+
+      .candidate-result-table {
+        margin-top: 16px;
+      }
+
+      .card-wrapper {
+        width: 100%;
+        max-width: 512px;
+        margin-top: 16px;
+        padding: 16px;
+  
+        .input-wrapper {
+          margin-bottom: 24px;
+  
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+  
+        .actions-wrapper {
+          display: flex;
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+}

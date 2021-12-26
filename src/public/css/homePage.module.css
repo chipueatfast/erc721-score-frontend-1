@@ -17,13 +17,20 @@
     font-weight: bold;
     margin-bottom: 8px; }
   .homePageContainer :global .author-wrapper {
-    margin-top: 24px; }
-    .homePageContainer :global .author-wrapper .text {
+    margin-top: 24px;
+    display: flex;
+    margin-left: -24px; }
+    .homePageContainer :global .author-wrapper .author-text {
       text-align: center; }
+    .homePageContainer :global .author-wrapper .members {
+      display: flex;
+      flex-direction: column;
+      margin-left: 8px; }
 
 @media screen and (max-width: 768px) {
   .homePageContainer {
-    padding: 0 16px; }
+    padding: 0 16px;
+    margin-top: 40px; }
     .homePageContainer :global .welcome-text {
       margin-bottom: 8px; }
       .homePageContainer :global .welcome-text .registration-introduction {

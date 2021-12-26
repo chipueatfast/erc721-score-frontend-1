@@ -53,9 +53,14 @@ function HomePage(props: {
                 src='https://image.flaticon.com/icons/png/512/326/326909.png'
             />
             <div className='author-wrapper'>
-                <Text className='text'>
-                    Author: Nguyen Tan Toan, Pham Huy Phat
-                </Text>
+                <div className='author-text'>
+                    Author:
+                </div>
+                <div className='members'>
+                    <div className='member-name'>Pham Huy Phat</div>
+                    <div className='member-name'>Tran Van Anh</div>
+                    <div className='member-name'>Nguyen Manh Hieu</div>
+                </div>
             </div>
         </div>
     );

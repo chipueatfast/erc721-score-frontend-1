@@ -1,0 +1,69 @@
+.candidateRegisterContainer {
+  padding: 0 30px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px; }
+  .candidateRegisterContainer :global .candidate-register-wrapper {
+    width: 600px;
+    margin: auto;
+    text-align: center; }
+  .candidateRegisterContainer :global .icon-wrapper svg {
+    width: 48px;
+    height: 48px; }
+  .candidateRegisterContainer :global .heading-wrapper .heading {
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: bold; }
+  .candidateRegisterContainer :global .heading-wrapper .description {
+    font-size: 16px;
+    line-height: 24px; }
+  .candidateRegisterContainer :global .candidate-result-table {
+    margin-top: 16px; }
+  .candidateRegisterContainer :global .card-wrapper {
+    width: 512px;
+    margin-top: 24px;
+    padding: 24px; }
+    .candidateRegisterContainer :global .card-wrapper .input-wrapper {
+      margin-bottom: 32px; }
+      .candidateRegisterContainer :global .card-wrapper .input-wrapper:last-child {
+        margin-bottom: 0; }
+      .candidateRegisterContainer :global .card-wrapper .input-wrapper img {
+        width: 100%; }
+    .candidateRegisterContainer :global .card-wrapper .actions-wrapper {
+      display: flex;
+      justify-content: flex-end; }
+
+@media screen and (max-width: 768px) {
+  .candidateRegisterContainer {
+    padding: 0 16px;
+    margin-top: 16px; }
+    .candidateRegisterContainer :global .candidate-register-wrapper {
+      width: 100%;
+      margin: auto;
+      text-align: left; }
+    .candidateRegisterContainer :global .icon-wrapper svg {
+      width: 36px;
+      height: 36px; }
+    .candidateRegisterContainer :global .heading-wrapper .heading {
+      font-size: 20px;
+      line-height: 30px; }
+    .candidateRegisterContainer :global .heading-wrapper .description {
+      font-size: 14px;
+      line-height: 20px; }
+    .candidateRegisterContainer :global .candidate-result-table {
+      margin-top: 16px; }
+    .candidateRegisterContainer :global .card-wrapper {
+      width: 100%;
+      max-width: 512px;
+      margin-top: 16px;
+      padding: 16px; }
+      .candidateRegisterContainer :global .card-wrapper .input-wrapper {
+        margin-bottom: 24px; }
+        .candidateRegisterContainer :global .card-wrapper .input-wrapper:last-child {
+          margin-bottom: 0; }
+      .candidateRegisterContainer :global .card-wrapper .actions-wrapper {
+        display: flex;
+        justify-content: flex-end; } }

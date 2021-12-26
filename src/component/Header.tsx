@@ -75,7 +75,7 @@ export function Header(props: IProps) {
                     />
                 }
             </div>
-            <Pane>
+            {displayName && <Pane>
                 <Tooltip
                     content={<Pane overflow='hidden'>
                         <Text textOverflow='ellipsis' color='white'>
@@ -88,7 +88,7 @@ export function Header(props: IProps) {
                         {displayName}
                     </Code>
                 </Tooltip>
-            </Pane>
+            </Pane>}
         </div>
     );
 }
