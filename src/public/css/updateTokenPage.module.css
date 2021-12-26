@@ -1,0 +1,64 @@
+.updateTokenContainer {
+  padding: 0 30px;
+  margin-top: 30px; }
+  .updateTokenContainer :global .heading {
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: bold;
+    text-align: center; }
+  .updateTokenContainer :global .card-container {
+    margin: auto;
+    width: 512px;
+    margin-top: 32px; }
+    .updateTokenContainer :global .card-container .card-wrapper {
+      padding: 24px;
+      margin: auto; }
+      .updateTokenContainer :global .card-container .card-wrapper .field-wrapper {
+        margin-bottom: 32px;
+        width: 100%; }
+        .updateTokenContainer :global .card-container .card-wrapper .field-wrapper input {
+          width: 100%; }
+        .updateTokenContainer :global .card-container .card-wrapper .field-wrapper:last-child {
+          margin-bottom: 0; }
+      .updateTokenContainer :global .card-container .card-wrapper .select-input-wrapper {
+        margin-bottom: 32px;
+        display: grid;
+        column-gap: 32px;
+        grid-template-columns: repeat(2, 1fr); }
+        .updateTokenContainer :global .card-container .card-wrapper .select-input-wrapper input {
+          width: 100%; }
+      .updateTokenContainer :global .card-container .card-wrapper .actions-wrapper {
+        display: flex;
+        justify-content: flex-end; }
+
+@media screen and (max-width: 768px) {
+  .updateTokenContainer {
+    padding: 0 16px;
+    margin-top: 16px; }
+    .updateTokenContainer :global .heading {
+      font-size: 20px;
+      line-height: 30px;
+      text-align: left; }
+    .updateTokenContainer :global .card-container {
+      max-width: 512px;
+      width: 100%;
+      margin-top: 16px; }
+      .updateTokenContainer :global .card-container .card-wrapper {
+        padding: 16px; }
+        .updateTokenContainer :global .card-container .card-wrapper .field-wrapper {
+          margin-bottom: 24px;
+          width: 100%; }
+          .updateTokenContainer :global .card-container .card-wrapper .field-wrapper input {
+            width: 100%; }
+          .updateTokenContainer :global .card-container .card-wrapper .field-wrapper:last-child {
+            margin-bottom: 0; }
+        .updateTokenContainer :global .card-container .card-wrapper .select-input-wrapper {
+          margin-bottom: 24px;
+          display: grid;
+          column-gap: 24px;
+          grid-template-columns: repeat(2, 1fr); }
+          .updateTokenContainer :global .card-container .card-wrapper .select-input-wrapper input {
+            width: 100%; }
+        .updateTokenContainer :global .card-container .card-wrapper .actions-wrapper {
+          display: flex;
+          justify-content: flex-end; } }
