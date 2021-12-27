@@ -11,6 +11,7 @@
     ],
     "outDir": "./build/",
     "strict": true,
+    "strictNullChecks": false,
     "declaration": true,
     "removeComments": true,
     "allowSyntheticDefaultImports": true,
