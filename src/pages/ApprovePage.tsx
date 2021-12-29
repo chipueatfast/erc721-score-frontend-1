@@ -106,7 +106,7 @@ function ApprovePage() {
         return (
           <div>
             {isVerified !== EnumCandidateVerifyStatus.PENDING ? (
-              <Text>No actions available</Text>
+              <Text>-</Text>
             ) : (
               <div>
                 <Tooltip content="Check for approval">

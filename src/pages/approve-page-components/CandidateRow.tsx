@@ -95,7 +95,7 @@ function CandidateRow(props : any) {
                 <Table.Cell>
                     {isVerified !== EnumCandidateVerifyStatus.PENDING
                         ?   <Text>
-                                No actions available
+                              -
                             </Text>
                         : <Pane>
                             <Tooltip content="Check for approval">
